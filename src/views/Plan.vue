@@ -1,53 +1,38 @@
-<template>
-<body>
-  <h1>Full Stack Project</h1>
-  <label for="Weekdays"><i>Choose a day</i></label>
-  <br>
-  <select id="Weekdays">
-    <option value="monday">Monday</option>
-    <option value="tuesday">Tuesday</option>
-    <option value="wednesday">Wednesday</option>
-    <option value="thursday">Thursday</option>
-    <option value="friday">Friday</option>
-  </select>
 
-  <br>
-  <br>
-  <br>
-  <table>
-    <tr>
-      <th>Information</th>
-      <th>Costs</th>
-      <th>Day</th>
-      <th>Downvotes</th>
-      <th>Id</th>
-      <th>Labels</th>
-      <th>Name</th>
-      <th>Upvotes</th>
-    </tr>
-    <tr>
-      <td>*</td>
-      <td>*</td>
-      <td>*</td>
-      <td>*</td>
-      <td>*</td>
-      <td>*</td>
-      <td>*</td>
-      <td>*</td>
-    </tr>
-  </table>
-  </body>
+<template>
+  <div>
+{{loadedData.data}}
+<dropdown></dropdown>
+<liste></liste>
+  </div>
 </template>
 
 <script>
-  export default {
-    name: 'Plan',
-    props: {
-      msg: String
-    }
-  }
-</script>
+import dropdown from "../components/dropdown.vue"
+import liste from "../components/liste.vue"
+import axios from 'axios'
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>
+export default {
+  name: 'Plan',
+  components: {
+    dropdown, liste
+  },
+  props: {
+    msg: String
+  },
+  data: function() {
+    return {
+      loadedData: "no data loaded", 
+    }
+  },
+  mounted(){ //document onload- einmal ausgeführt wenn componente bereit
+  axios.get("http://localhost:3000/mensa/Di")
+  .then(response => {
+    this.loadedData = response 
+  })
+  .catch(err => {
+    console.log(err);
+  })
+  }
+}
+</script>
