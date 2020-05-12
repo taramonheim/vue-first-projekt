@@ -22,7 +22,7 @@
   export default {
     name: 'dropdown',
     props: {
-      msg: String
+     data: String
     }
   }
 </script>

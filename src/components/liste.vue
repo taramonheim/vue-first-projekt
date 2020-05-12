@@ -30,7 +30,7 @@
   export default {
     name: 'liste',
     props: {
-      msg: String
+    data: String
     }
   }
 </script>
