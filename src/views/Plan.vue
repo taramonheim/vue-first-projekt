@@ -1,9 +1,8 @@
 
 <template>
   <div>
-{{loadedData.data}}
-<dropdown></dropdown>
-<liste></liste>
+<dropdown :days= "loadedData.days"></dropdown>
+<liste :MensaOptions= "loadedData.data"></liste>
   </div>
 </template>
 
