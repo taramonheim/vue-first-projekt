@@ -7,7 +7,7 @@
     <h1>Der Mensa Plan</h1>
     <label for="Weekdays"><i>Choose a day</i></label>
     <br>
-    <select v-if="days.length > 0">
+    <select name="Wochentag" id="selectBox">
      <option v-for="day in days" :key="day">{{day}}</option>
     </select>
     <br>
@@ -22,7 +22,6 @@
     props: {
      //mensaDays: Object
      days: Array,
-     
     }
   }
 </script>

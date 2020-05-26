@@ -14,7 +14,8 @@
         <th>Labels</th>
         <th>Name</th>
         <th>Upvotes</th>
-      <Mahlzeit v-for= "categorys in MensaOptions" :key="categorys"></Mahlzeit>
+        </tr>
+      <Mahlzeit v-for= "mealfromTable in MensaOptions" :key="mealfromTable" :food="mealfromTable"></Mahlzeit> 
     </table>
 </div>
 </template>
@@ -26,6 +27,9 @@
     props: {
     MensaOptions: String
     //mensaOptions: Array  
+    },
+    components: {
+      Mahlzeit
     }
   }
 </script>
