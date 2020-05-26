@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Plan msg="Welcome to Your Vue.js App"/>
+    <img alt="forkify logo" src="./assets/logo.png">
+    <Plan msg="Welcome to the Menu"/>
   </div>
 </template>
 

@@ -14,20 +14,13 @@
         <th>Labels</th>
         <th>Name</th>
         <th>Upvotes</th>
-      <tr v-for= "categorys in MensaOptions" :key="categorys">
-        <td>{{categorys.category}}</td>
-        <td>{{categorys.contentInformation}}</td>
-        <td>{{categorys.cost}}</td>
-        <td>{{categorys.day}}</td>
-        <td>*</td>
-        <td>*</td>
-        <td>*</td>
-        <td>*</td>
-      </tr>
+      <Mahlzeit v-for= "categorys in MensaOptions" :key="categorys"></Mahlzeit>
     </table>
 </div>
 </template>
+
 <script>
+  import Mahlzeit from "../components/Mahlzeit.vue"
   export default {
     name: 'liste',
     props: {
@@ -42,8 +35,8 @@
 .table {
   border: 1px;
 }
-div.mahlzeit {
+div.food {
   margin-bottom: 20px;
-  background-color: yellow;
+  background-color: blue;
 }
 </style>
