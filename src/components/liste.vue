@@ -25,7 +25,7 @@
   export default {
     name: 'liste',
     props: {
-    MensaOptions: String
+    MensaOptions: String 
     //mensaOptions: Array  
     },
     components: {
@@ -36,11 +36,8 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.table {
-  border: 1px;
-}
-div.food {
-  margin-bottom: 20px;
-  background-color: blue;
-}
+table, th,td { border: 1px solid orange; 
+border-collapse: separate;
+background-color: blanchedalmond; }
+
 </style>

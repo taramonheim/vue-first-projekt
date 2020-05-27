@@ -24,4 +24,5 @@
 </script>
 
 <style scoped>
+table, th,td { border: 1px solid rgb(255, 90, 90); border-collapse: separate; }
 </style>
