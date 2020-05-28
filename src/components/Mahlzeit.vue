@@ -1,15 +1,10 @@
 <template>
-       <tr>
-          <th>{{food.category}}</th>
-          <td>{{food.contentInformation}}</td>
-          <td>{{food.cost}}</td>
-          <td>{{food.day}}</td>
-          <td>{{food.downvotes}}</td>
-          <td>{{food.id}}</td>
-          <td>{{food.labels}}</td>
-          <td>{{food.name}}</td>
-          <td>{{food.upvotes}}</td>
-      </tr>
+       <div>
+         <h5>{{food.category}}</h5>
+         <br/> 
+         <h3>{{food.name}}</h3>
+       {{food.cost}} Euro <br/>
+       </div>
 </template>
 
 <script>
@@ -21,6 +16,18 @@
      
     }
   }
+
+     /*<tr>
+          <th>{{food.category}}</th>
+          <td>{{food.contentInformation}}</td>
+          <td>{{food.cost}}</td>
+          <td>{{food.day}}</td>
+          <td>{{food.downvotes}}</td>
+          <td>{{food.id}}</td>
+          <td>{{food.labels}}</td>
+          <td>{{food.name}}</td>
+          <td>{{food.upvotes}}</td>
+      </tr>*/
 </script>
 
 <style scoped>
