@@ -7,17 +7,23 @@
       controls
       indicators
       background="#ababab"
-      img-width="1024"
+      img-width="1000"
       img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-    <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-  <Mahlzeit class="food" v-for="mealfromTable in MensaOptions" :key="mealfromTable" :food="mealfromTable">
- </Mahlzeit>
-     </b-carousel-slide>
+    <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=55">-->
+    <Mahlzeit class="meal" v-for="meal in MensaOptions" :key="meal" :food="meal"></Mahlzeit>
+    </b-carousel-slide>
     </b-carousel>
+  <!--<div>
+  <div class="card" style="width: 18rem;">
+   <div class="card-body">
+  <p class="card-text"><Mahlzeit class="mealfromTable" ve-for="mealfromTable in MensaOptions" :key="mealfromTable" :food="mealfromTable"></Mahlzeit></p>
+</div>
+</div>
+</div>-->
 </template>
 
 <script>
@@ -32,8 +38,7 @@
       Mahlzeit
     }
   }
-  /* 
-  <table>
+  /* <table>
       <tr>
         <th>Category</th>
         <th>Information</th>

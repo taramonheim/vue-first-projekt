@@ -31,7 +31,7 @@ export default {
     }
   },
   mounted(){ //document onload- einmal ausgeführt wenn componente bereit
-  axios.get("http://localhost:3000/api/getFromDatabase")
+  axios.get("http://127.0.0.1:3000/api/getFromDatabase")
   .then(response => {
     this.loadedData = response.data; 
     this.dropDownData = this.loadedData.map((essen) => essen.day); //holt alle Tage aus der loadedData
